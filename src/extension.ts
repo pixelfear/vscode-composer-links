@@ -33,7 +33,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 export function deactivate() {}
 
-const createHoverContentsFromPackage = function (pkg: Object) {
+const createHoverContentsFromPackage = function (pkg: any) {
 	const sourceUrl = pkg.source.url;
 	const sourceText = sourceUrl.includes('github.com') ? 'GitHub' : 'Source';
 	const sourceHref = sourceUrl.replace(/\.git$/, '')
